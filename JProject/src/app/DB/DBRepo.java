@@ -498,7 +498,7 @@ public class DBRepo {
 		}
 	}	
 	public void DeleteParty(Integer partyid) {
-		sql = "delete from party_players where partyid=?";
+		sql = "delete from party_players where party_id=?";
 		conn = DBConnection.getConnection();
 		try {
 			state = conn.prepareStatement(sql);
