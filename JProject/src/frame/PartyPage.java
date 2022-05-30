@@ -188,6 +188,10 @@ public class PartyPage extends Page{
 		public void actionPerformed(ActionEvent e) {			
 			if(partyid > -1) {
 				repo.DeleteParty(partyid);
+				RefreshPartiesTable();
+				RefreshFreePlayersTable();
+				RefreshMemberTable();
+				partyid= -1;
 			}
 			else {
 				infoBox("Select a party!");
